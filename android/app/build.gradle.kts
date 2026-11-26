@@ -29,8 +29,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
-    // Language packs only for the default locale: keeps the APK small.
-    androidResources { localeFilters += listOf("en") }
 }
 
 dependencies {
