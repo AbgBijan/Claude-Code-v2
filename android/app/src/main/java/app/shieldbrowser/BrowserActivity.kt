@@ -262,7 +262,8 @@ abstract class BrowserActivity : Activity() {
             // tel:, mailto:, intent:, market: ... hand off to other apps.
             try {
                 val intent = Intent.parseUri(req.url.toString(), Intent.URI_INTENT_SCHEME)
-                    .addCategory(Intent.CATEGORY_BROWSABLE).setComponent(null).setSelector(null)
+                    .addCategory(Intent.CATEGORY_BROWSABLE).setComponent(null)
+                intent.selector = null
                 startActivity(intent)
             } catch (_: Exception) {
                 Toast.makeText(this@BrowserActivity, R.string.no_app, Toast.LENGTH_SHORT).show()
