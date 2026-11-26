@@ -1,4 +1,4 @@
-package app.shieldbrowser
+package app.azreebrowser
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

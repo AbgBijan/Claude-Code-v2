@@ -1,4 +1,4 @@
-package app.shieldbrowser
+package app.azreebrowser
 
 import android.os.Bundle
 

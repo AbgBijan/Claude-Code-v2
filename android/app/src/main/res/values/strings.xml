@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Shield Browser</string>
+    <string name="app_name">Azree Browser</string>
     <string name="incognito">Incognito</string>
     <string name="new_incognito">New incognito tab</string>
     <string name="close_incognito">Close incognito</string>

@@ -1,4 +1,4 @@
-package app.shieldbrowser
+package app.azreebrowser
 
 import android.annotation.SuppressLint
 import android.app.Activity

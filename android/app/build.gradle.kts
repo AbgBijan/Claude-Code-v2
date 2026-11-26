@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "app.shieldbrowser"
+    namespace = "app.azreebrowser"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "app.shieldbrowser"
+        applicationId = "app.azreebrowser"
         minSdk = 29          // Android 10+
         targetSdk = 35
         versionCode = 1
@@ -34,3 +34,5 @@ android {
 dependencies {
     testImplementation("junit:junit:4.13.2")
 }
+
+base { archivesName.set("Azree-Browser-v1.0") }

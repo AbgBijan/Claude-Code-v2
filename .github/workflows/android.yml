@@ -37,5 +37,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: shield-browser-apk
+          name: azree-browser-apk
           path: android/app/build/outputs/apk/release/*.apk

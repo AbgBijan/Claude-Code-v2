@@ -42,7 +42,7 @@
             android:label="@string/incognito"
             android:launchMode="singleTask"
             android:process=":incognito"
-            android:taskAffinity="app.shieldbrowser.incognito"
+            android:taskAffinity="app.azreebrowser.incognito"
             android:theme="@style/Theme.Browser.Incognito"
             android:windowSoftInputMode="adjustResize" />
     </application>

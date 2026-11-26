@@ -7,7 +7,7 @@
         android:shortcutShortLabel="@string/new_incognito">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="app.shieldbrowser.IncognitoActivity"
-            android:targetPackage="app.shieldbrowser" />
+            android:targetClass="app.azreebrowser.IncognitoActivity"
+            android:targetPackage="app.azreebrowser" />
     </shortcut>
 </shortcuts>

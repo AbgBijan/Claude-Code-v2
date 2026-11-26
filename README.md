@@ -1,4 +1,4 @@
-# Chromium uBlock (+ Shield Browser for Android)
+# Chromium uBlock (+ Azree Browser for Android)
 
 A portable Chromium browser with **uBlock Origin Lite** built in. You don't have to
 install anything from the Web Store. The ad blocker is part of the bundle and loads every time the
@@ -36,7 +36,7 @@ are kept.
 ## Android
 
 Chromium on Android can't load extensions, so the `android/` folder has
-**Shield Browser** instead: a small, standalone Android browser with ad blocking built in.
+**Azree Browser** instead: a small, standalone Android browser with ad blocking built in.
 It uses uBlock Origin Lite's default filter lists: uBlock filters, EasyList, EasyPrivacy,
 Peter Lowe's list, uBlock badware and URLhaus. That's about 93k blocked domains and 18k URL
 rules.
@@ -56,7 +56,7 @@ rules.
 ### Getting the APK
 
 GitHub Actions builds it on every push that changes `android/`. Open **Actions → Android
-APK**, choose the latest run and download `shield-browser-apk`. Copy the APK to the phone
+APK**, choose the latest run and download `azree-browser-apk`. Copy the APK to the phone
 and open it to install (allow "Install unknown apps" when asked).
 
 To build it yourself, open `android/` in Android Studio, or run `./gradlew assembleRelease`
@@ -79,7 +79,7 @@ gaps where ads were, and YouTube video ads aren't blocked reliably. If you need 
 full uBlock Origin on Android, use Firefox for Android: it supports the real extension.
 
 The filter data comes from uBlock Origin Lite (GPLv3) and the filter lists it bundles,
-each under its own license. Shield Browser is not affiliated with uBlock Origin.
+each under its own license. Azree Browser is not affiliated with uBlock Origin.
 
 ## Desktop options
 

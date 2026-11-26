@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ShieldBrowser"
+rootProject.name = "AzreeBrowser"
 include(":app")
