@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#16181C</color>
+    <color name="urlbar">#2A2D33</color>
+    <color name="shield_on">#F2B8B5</color>
+</resources>

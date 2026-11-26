@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Browser" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorPrimary">@color/accent</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Incognito is always dark so it is never confused with a normal window. -->
+    <style name="Theme.Browser.Incognito" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorBackground">@color/bg_incognito</item>
+        <item name="android:windowBackground">@color/bg_incognito</item>
+        <item name="android:colorAccent">#A8C7FA</item>
+        <item name="android:colorPrimary">#A8C7FA</item>
+        <item name="android:statusBarColor">@color/bg_incognito</item>
+        <item name="android:navigationBarColor">@color/bg_incognito</item>
+    </style>
+</resources>

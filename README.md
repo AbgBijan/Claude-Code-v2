@@ -1,4 +1,4 @@
-# Chromium uBlock
+# Chromium uBlock (+ Shield Browser for Android)
 
 A portable Chromium browser with **uBlock Origin Lite** built in. You don't have to
 install anything from the Web Store. The ad blocker is part of the bundle and loads every time the
@@ -33,7 +33,55 @@ The build script:
 To update Chromium and uBO, run the build again. Your profile, bookmarks and settings
 are kept.
 
-## Options
+## Android
+
+Chromium on Android can't load extensions, so the `android/` folder has
+**Shield Browser** instead: a small, standalone Android browser with ad blocking built in.
+It uses uBlock Origin Lite's default filter lists: uBlock filters, EasyList, EasyPrivacy,
+Peter Lowe's list, uBlock badware and URLhaus. That's about 93k blocked domains and 18k URL
+rules.
+
+- **Light:** about 1–2 MB, no third-party libraries, and it uses the phone's built-in
+  Chromium WebView. Needs Android 10 or later.
+- **Incognito:** open it from the ⋮ menu, by long-pressing a link, or by long-pressing the app
+  icon. It runs in a separate process with its own cookies, storage and cache, so nothing
+  is shared with normal browsing. It doesn't cache to disk or keep history. Screenshots
+  and the recent-apps preview are blocked. Everything is wiped when you close it, and again
+  on the next launch if Android killed it.
+- **Shield:** shows how many ads and trackers were blocked on the page. Tap it to turn
+  blocking off or on for that site.
+- Also handles downloads, file uploads, full-screen video, and links to other apps
+  (`tel:`, `mailto:`, …). Third-party cookies are blocked.
+
+### Getting the APK
+
+GitHub Actions builds it on every push that changes `android/`. Open **Actions → Android
+APK**, choose the latest run and download `shield-browser-apk`. Copy the APK to the phone
+and open it to install (allow "Install unknown apps" when asked).
+
+To build it yourself, open `android/` in Android Studio, or run `./gradlew assembleRelease`
+with the Android SDK installed. The APK is written to `android/app/build/outputs/apk/release/`.
+
+### Updating the filter lists
+
+Run the workflow manually with **Refresh filter lists** ticked, or:
+
+```bash
+git clone --depth 1 https://github.com/uBlockOrigin/uBOL-home /tmp/ubol
+python3 android/tools/gen_filters.py /tmp/ubol/chromium/rulesets android/app/src/main/assets/filters.txt
+```
+
+### Limits compared with uBO on desktop
+
+It blocks network requests (ads, trackers, malware domains). It doesn't do cosmetic
+filtering (hiding empty ad boxes) or scriptlet injection, so some sites may show blank
+gaps where ads were, and YouTube video ads aren't blocked reliably. If you need the
+full uBlock Origin on Android, use Firefox for Android: it supports the real extension.
+
+The filter data comes from uBlock Origin Lite (GPLv3) and the filter lists it bundles,
+each under its own license. Shield Browser is not affiliated with uBlock Origin.
+
+## Desktop options
 
 | `build.sh`          | `build.ps1`   | Meaning                                         |
 |---------------------|---------------|-------------------------------------------------|

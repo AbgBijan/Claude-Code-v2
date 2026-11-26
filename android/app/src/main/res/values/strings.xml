@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shield Browser</string>
+    <string name="incognito">Incognito</string>
+    <string name="new_incognito">New incognito tab</string>
+    <string name="close_incognito">Close incognito</string>
+    <string name="open_incognito">Open in incognito tab</string>
+    <string name="copy_link">Copy link</string>
+    <string name="url_hint">Search or type URL</string>
+    <string name="menu">Menu</string>
+    <string name="forward">Forward</string>
+    <string name="reload">Reload</string>
+    <string name="share">Share</string>
+    <string name="disable_blocking">Turn off blocking on this site</string>
+    <string name="enable_blocking">Turn on blocking on this site</string>
+    <string name="blocking_off">Ad blocking off for %1$s</string>
+    <string name="blocking_on">Ad blocking on for %1$s</string>
+    <string name="shield_description">Ads and trackers blocked on this page. Tap to turn blocking on or off for this site.</string>
+    <string name="downloading">Downloading %1$s</string>
+    <string name="no_app">No app can open this link</string>
+</resources>

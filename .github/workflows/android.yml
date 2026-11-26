@@ -1,0 +1,41 @@
+name: Android APK
+
+on:
+  push:
+    paths: ["android/**", ".github/workflows/android.yml"]
+  workflow_dispatch:
+    inputs:
+      refresh_filters:
+        description: "Regenerate filters from the latest uBlock Origin Lite"
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh filter lists
+        if: ${{ inputs.refresh_filters }}
+        run: |
+          git clone --depth 1 https://github.com/uBlockOrigin/uBOL-home /tmp/ubol
+          python3 tools/gen_filters.py /tmp/ubol/chromium/rulesets app/src/main/assets/filters.txt
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Test and build
+        run: ./gradlew --no-daemon testReleaseUnitTest assembleRelease
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shield-browser-apk
+          path: android/app/build/outputs/apk/release/*.apk

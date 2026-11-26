@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#FFFFFF</color>
+    <color name="urlbar">#EEF0F3</color>
+    <color name="accent">#B3261E</color>
+    <color name="shield_on">#B3261E</color>
+    <color name="shield_off">#8A8F98</color>
+    <color name="bg_incognito">#202124</color>
+    <color name="urlbar_incognito">#3C4043</color>
+</resources>
